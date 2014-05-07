@@ -20,7 +20,7 @@
     "fontSwatch": {
        "title": "Lato",
         "font1": {
-            "font-family": "\"Signika\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
             "font-size": "60px",
             "font-weight": "700",
             "line-height": "60px",
@@ -79,7 +79,7 @@
             "background-color-hover": "@color-swatch5"
         },
         "font8": {
-            "font-family": "\"Signika\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
             "font-size": "60px",
             "font-weight": "700",
             "line-height": "60px",
