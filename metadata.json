@@ -57,8 +57,7 @@
             "font-weight": "inherit",
             "line-height": "14px",
             "color": "@color-swatch1",
-            "letter-spacing": "inherit",
-            "background-color": "transparent"
+            "letter-spacing": "inherit"
         },
         "font6": {
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
