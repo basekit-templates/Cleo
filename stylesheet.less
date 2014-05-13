@@ -11,7 +11,7 @@
 
 
 body {
-  background-color: @color-swatch1;
+  background-color: @color-swatch4;
   background-repeat: repeat;
   background-position: center;
   margin: 0;
@@ -25,12 +25,16 @@ body {
 
 .main h1, .main h2, .main h3, .main h4 {
   font-weight: 600;
+  padding: 0.2em 0;
 }
 
 .bk-footer p {
   background-color: transparent;
 }
 
+strong, b{
+  font-weight: bold;
+}
 
 ul, ol, li {
   font-family:@font-swatch5-font-family;
@@ -39,16 +43,24 @@ ul, ol, li {
   line-height:@font-swatch5-line-height;
   color:@font-swatch5-color;
   letter-spacing: @font-swatch5-letter-spacing;
-  background-color: @color-swatch1;
+  background-color: transparent;
 }
 
 ul {
-list-style-type: square;
+  list-style-type: none;
 }
-
+a{
+  color: @color-swatch1;
+}
 .bk-content-text ul, .bk-content-text ol, .bk-content-text li {
   padding-left: 1.4em; 
-  text-indent: -1.4em;
+  text-indent: -0.4em;
+}
+.bk-content-text ul{
+  padding-left: 0;
+}
+.bk-content-text ol li{
+  padding-left: 0;
 }
 
 button{
@@ -58,7 +70,9 @@ button{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+code{
+  background: @color-swatch3;
+}
 /* ===============================
    CUSTOM CSS
    =============================== */
@@ -103,9 +117,9 @@ button{
 
 /* LOGO */
 .logo-wrap{
-    text-align: center;
-    padding: 18px 0;
-    background: @color-swatch4;
+  text-align: center;
+  padding: 18px 0;
+  background: @color-swatch4;
 }
 
 .widget.logo {
@@ -151,10 +165,13 @@ button{
 /* ===============================
    NAVIGATION
    =============================== */
+.menu-sz{
+  background-color: @color-swatch3;
+}
 .sz-nav{
-    background-color: @color-swatch2;
-    min-height: 37px;
-    line-height: 37px;
+  background-color: @color-swatch3;
+  min-height: 37px;
+  line-height: 37px;
 }
 .widget.navigation {
 }
@@ -164,18 +181,15 @@ button{
   margin: 0;
 }
 
-.widget.navigation ul.align-center li
-{
+.widget.navigation ul.align-center li{
   text-align: center;
 }
 
-.widget.navigation ul.align-left li
-{
+.widget.navigation ul.align-left li{
   text-align: left;
 }
 
-.widget.navigation ul.align-right li
-{
+.widget.navigation ul.align-right li{
   text-align: right;
 }
 
@@ -185,7 +199,7 @@ button{
   padding-right: 30px;
 }
 
-.widget.navigation ul li a {
+.widget.navigation ul li a{
   display: block;
   font-family:@font-swatch6-font-family;
   font-size:@font-swatch6-font-size;
@@ -195,7 +209,7 @@ button{
   letter-spacing: @font-swatch6-letter-spacing;
 }
 
-.widget.navigation ul li a:hover {
+.widget.navigation ul li a:hover{
   text-decoration: none;
   color: @font-swatch6-color-hover;
 }
@@ -205,10 +219,10 @@ button{
    =============================== */
 
 .widget.extendednavigation {
-  float: right;
+  float: left;
   position: relative;
-  background-color: transparent;
-  max-width: 690px;
+  background-color: @color-swatch3;
+  max-width: 100%;
 }
 
 .widget.extendednavigation a.pull {
@@ -219,29 +233,34 @@ button{
   float: left;
   padding: 0;
   margin: 0;
-  background-color: @color-swatch4;
+  background-color: @color-swatch3;
 }
 
 .widget.extendednavigation ul li {
   float: left;
   display: block;
   color: @color-swatch1;
+  background-color: @color-swatch3;
+  line-height: 37px;
 }
 .widget.extendednavigation ul li a{
-    color: @color-swatch1;
+  color: @color-swatch1;
+  line-height: 37px;
 }
 .widget.extendednavigation ul li:hover {
   color: @color-swatch7;
   background-color: transparent;
 }
-
+.widget .extendednavigation ul li.folder .text{
+  line-height: 37px;
+}
 /* ===============================
    FOOTER
    =============================== */
 
 .bk-footer {
   padding: 2em 0;
-  background-color: @color-swatch2;
+  background-color: @color-swatch3;
   min-height: 150px;
 }
 
@@ -254,7 +273,34 @@ button{
 .bk-footer ul, .bk-footer ol, .bk-footer li {
   background-color: @color-swatch3;
 }
-
+#f-time{
+  padding-top: 0;
+}
+.copy-sz{
+  text-align: center;
+}
+.copy-sz{
+  margin: 2em auto;
+}
+.copy-sz .widget.profile .bk-profile-socialicons{
+  margin: 2em 0 0;
+}
+.copy-sz .widget.profile .bk-profile-socialicons span a{
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background-color: @color-swatch6;
+  background-size: auto;
+}
+.copy-sz .widget.profile .bk-profile-socialicons span a:hover{
+  background-color: @color-swatch5;
+}
+.bk-footer .widget.contactform form{
+  padding: 0;
+}
+.copy-sz .widget.image span img{
+  margin: 0 auto;
+}
 /* ===============================
    FEATURE
    =============================== */
@@ -269,9 +315,10 @@ button{
   padding-bottom: 0;
 }
 .widget.feature .feature-bgimg .content{
-    vertical-align: top;
-    padding-top: 30px;
+  vertical-align: top;
+  padding-top: 30px;
 }
+
 /* FEATURE TITLE */
 
 .widget.feature h2 {
@@ -279,7 +326,7 @@ button{
   font-size:@font-swatch1-font-size;
   font-weight: @font-swatch1-font-weight;
   line-height:@font-swatch1-line-height;
-  color: @font-swatch1-color;
+  color: @color-swatch1;
   letter-spacing: @font-swatch1-letter-spacing;
   padding: 0;
   text-align: right;
@@ -294,29 +341,30 @@ button{
 
 .widget.feature h3 {
   font-family:@font-swatch5-font-family;
-  font-size: @font-swatch5-font-size;
+  font-size: @font-swatch4-font-size;
   font-weight: @font-swatch5-font-weight;
   line-height:@font-swatch5-line-height;
   color: @font-swatch5-color;
   letter-spacing: @font-swatch5-letter-spacing;
   padding: 10px 0;
+  text-align: right;
 }
 
-.widget.feature h3 span {
+.widget.feature h3 span{
   background-color: transparent;
   padding: 0 6px;
 }
 
 /* FEATURE BUTTON */
 
-.widget.feature .feature-btn {
+.widget.feature .feature-btn{
   max-width: 930px;
   display: block;
 }
 
-.widget.feature button {
+.widget.feature button{
   margin: 10px 0 8px;
-  padding: 10px 10px 8px;
+  padding: 6px 10px;
   border: 2px solid @color-swatch1;
   font-family: @font-swatch7-font-family;
   font-weight:@font-swatch7-font-weight;
@@ -328,8 +376,7 @@ button{
   letter-spacing: 1px;
 }
 
-.widget.feature button:hover 
-{
+.widget.feature button:hover{
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
 }
@@ -375,12 +422,9 @@ button{
     vertical-align: middle;
 }
 
- 
-
 /* ===============================
    PAYPAL & DROPBOX BUTTON
    =============================== */
-
 
 .widget.paypalbuynow .widget.button.paypal, .widget.dropbox .b-wrap .btn {
   font-family: @font-swatch7-font-family;
@@ -389,18 +433,16 @@ button{
   background-color: @font-swatch7-background-color;
   line-height: @font-swatch7-line-height;
   color: @font-swatch7-color;
-  padding: 12px 10px 10px 45px;
+  padding: 6px 10px 6px 45px;
   border: none;
 }
-
-
 
 /* ===============================
    BUTTON CSS
    =============================== */
 
 .widget.button button, button{
-  padding: 12px 20px 10px;
+  padding: 6px 20px;
   border: none;
   -webkit-box-shadow: 0 2px 0px rgba(50, 50, 50, 0.5);
   -moz-box-shadow: 0 2px 0px rgba(50, 50, 50, 0.5);
@@ -431,57 +473,59 @@ button{
    CONTENT CSS
    =============================== */
 
-
 .widget.content{
-    padding: 10px 0 0;
-    overflow: hidden;
+  padding: 0.7em 0;
+  overflow: hidden;
 }
 
 .widget.content span.expand{
-    font-family: @font-swatch3-font-family;
-    background-color: @color-swatch3;
-    color: @font-swatch7-color;
-    font-size: @font-swatch5-font-size;
-    padding: 4px 8px;
-    margin: 4px 0;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    cursor: pointer;
-    display: inline-block;
+  font-family: @font-swatch3-font-family;
+  background-color: @color-swatch3;
+  color: @font-swatch7-color;
+  font-size: @font-swatch5-font-size;
+  padding: 4px 8px;
+  margin: 4px 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
 }
 
 .widget.content span.expand:hover,
-.widget.content span.expand:focus
-{
-    cursor: pointer;
-    background-color: darken(@color-swatch3,5%);
+.widget.content span.expand:focus{
+  cursor: pointer;
+  background-color: darken(@color-swatch3,5%);
 }
+.maintextcontent{
+  padding-bottom: 1em;
+}
+/* ===============================
 
+   =============================== */
 /* ===============================
    IMAGE WIDGET
    =============================== */
 
-.widget.image img
-{
-    display:block;
-    max-width: 100%;
-    border: 0;
-    border-width: 0;
+.widget.image img{
+  display:block;
+  max-width: 100%;
+  border: 0;
+  border-width: 0;
 }
 
 .widget.image {
 }
 
 .widget.image span.image-title {
-    display: block;
-    margin:10px 0 0;
-    font-family: @font-swatch4-font-family;
-    font-weight: @font-swatch4-font-weight;
-    font-size: @font-swatch4-font-size;
-    color:  @font-swatch4-color;
-    text-decoration: none;
-    line-height: @font-swatch4-line-height;
+  display: block;
+  margin:10px 0 0;
+  font-family: @font-swatch4-font-family;
+  font-weight: @font-swatch4-font-weight;
+  font-size: @font-swatch4-font-size;
+  color:  @font-swatch4-color;
+  text-decoration: none;
+  line-height: @font-swatch4-line-height;
 }
 
 .widget.image a:hover {
@@ -493,73 +537,69 @@ button{
 }
 
 .widget.image span.image-description {
-    display: block;
-    margin:0 0 10px;
-    font-family: @font-swatch5-font-family;
-    font-weight: @font-swatch5-font-weight;
-    font-size: @font-swatch5-font-size;
-    line-height: @font-swatch5-line-height;
-    color: @font-swatch5-color;
+  display: block;
+  margin:0 0 10px;
+  font-family: @font-swatch5-font-family;
+  font-weight: @font-swatch5-font-weight;
+  font-size: @font-swatch5-font-size;
+  line-height: @font-swatch5-line-height;
+  color: @font-swatch5-color;
 }
 
 /* ===============================
    GALLERY WIDGET
    =============================== */
-
 .widget.gallery{
 }
 
 .widget.gallery ul{
-    display:block;
-    margin: 0;
-    padding:0px;
-    list-style: none;
+  display:block;
+  margin: 0;
+  padding:0px;
+  list-style: none;
 }
 
 .widget.gallery li{
-    float: left;
-    position: relative;
-    width: 33.3%;
-    padding-bottom: 33%;
-    list-style-type: none;
+  float: left;
+  position: relative;
+  width: 33.3%;
+  padding-bottom: 33%;
+  list-style-type: none;
 }
 
 .widget.gallery li span.inner {
-    background-position:center center;
-    background-repeat:no-repeat;
-    background-color: @color-swatch1;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-color: @color-swatch1;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.widget.gallery ul li.one-to-one span.inner
-{
-    background-size:100% 100%;
+.widget.gallery ul li.one-to-one span.inner{
+  background-size: 100% 100%;
 }
 
-.widget.gallery ul li.portrait span.inner
-{
-    background-size:100% auto;
+.widget.gallery ul li.portrait span.inner{
+  background-size: 100% auto;
 }
 
-.widget.gallery ul li.landscape span.inner
-{
-    background-size:auto 100%;
+.widget.gallery ul li.landscape span.inner{
+  background-size: auto 100%;
 }
 
 .widget.gallery li span.inner {
-    position: absolute;
-    left: 5px;
-    right: 5px;
-    top: 0px;
-    bottom: 16px;
-    overflow: hidden;
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  top: 0px;
+  bottom: 16px;
+  overflow: hidden;
 }
 
 .widget.gallery li span.inner img {
-    display:none;
+  display: none;
 }
 
 .widget.gallery ul:before,
@@ -626,7 +666,6 @@ button{
   font-size:bkscale(@font-swatch5-font-size,0.9);
 }
 
-
 /* ===============================
    DIVIDER WIDGET
    =============================== */
@@ -636,7 +675,7 @@ button{
 }
 
 hr.line {
-   background-color: darken(@color-swatch2,10%);
+   background-color: @color-swatch2;
    height: 1px;
    width: 100%;
    border: none;
@@ -664,8 +703,8 @@ hr.line.align-right {
 }
 
 .widget.clicktocall a {
-  background-color: @color-swatch1;
-  margin: 2.2em auto;
+  background-color: @color-swatch3;
+  margin: 1em auto;
   border: none;
   font-family: @font-swatch5-font-family;
   font-size: @font-swatch5-font-size;
@@ -674,12 +713,19 @@ hr.line.align-right {
   text-decoration: none;
   letter-spacing: 1px;
   cursor: default;
+  padding: 6px 10px;
+  border-radius: 2px;
+  display: inline-block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
-
+.widget.clicktocall a:hover{
+  padding: 6px 10px;
+}
 /* ===============================
    TWITTER WIDGET
    =============================== */
-
 
 .widget.twitter {
 }
@@ -700,15 +746,17 @@ hr.line.align-right {
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
     padding: 30px 0;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid @color-swatch2;
 }
-
+.twitter ul li a{
+  font-size: @font-swatch10-font-size;
+}
 .widget.twitter ul li p {
   padding: 0;
 }
 
 .widget.twitter ul li:first-child {
-    border-top: 1px solid #ebebeb;
+    border-top: 1px solid @color-swatch2;
 }
 
 .widget.twitter ul li:last-child {
@@ -726,7 +774,7 @@ hr.line.align-right {
 
 .widget.twitter .twitter-content span.bk-full-name {
     font-family: @font-swatch4-font-family;
-    color: @color-swatch3;
+    color: @color-swatch2;
     font-size: @font-swatch4-font-size;
     font-weight: bold;
 }
@@ -756,6 +804,7 @@ hr.line.align-right {
     line-height:@font-swatch4-line-height;
     color:@font-swatch4-color;
     letter-spacing: @font-swatch4-letter-spacing;
+    font-weight: bold;
 }
 
 .widget.contactform fieldset input {
@@ -770,7 +819,15 @@ hr.line.align-right {
     margin-bottom: 30px;
     padding: 0;
     background-color: @color-swatch4;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
+
+::-webkit-input-placeholder { color: @color-swatch7; }
+::-moz-placeholder { color: @color-swatch7; } /* firefox 19+ */
+:-ms-input-placeholder { color: @color-swatch7; } /* ie */
+input:-moz-placeholder { color: @color-swatch7; }
 
 .widget.contactform fieldset textarea {
     height: 100px;
@@ -786,10 +843,13 @@ hr.line.align-right {
     resize: none;
     padding: 0;
     background-color: @color-swatch4;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 
 .widget.contactform fieldset button.btn {
-    padding: 12px 20px 10px;
+    padding: 6px 20px;
     margin: 0;
     border: none;
     -webkit-box-shadow: 0 2px 0px @color-swatch3;
@@ -814,11 +874,13 @@ hr.line.align-right {
 /* ==================================================
    SINGLE EMAIL FORM, SIGN UP FORM & BLOG SEARCH FORM
    ================================================== */
-
+.widget.signupform{
+  
+}
 
  .widget.signupform, .widget.profile form, .blog-search-form {
     display: block;
-    padding: 20px;
+    padding: 20px 0;
     margin-bottom: 20px;
     background-color: transparent;
     -webkit-border-radius: 3px;
@@ -834,7 +896,6 @@ hr.line.align-right {
 
 .widget.profile fieldset label, .widget.signupform fieldset label, .blog-search-form label {
     width: 100%;
-    float: left;
     font-family:@font-swatch4-font-family;
     font-size:@font-swatch4-font-size;
     font-weight:@font-swatch4-font-weight;
@@ -845,7 +906,7 @@ hr.line.align-right {
 
 .widget.profile form fieldset input, .widget.signupform fieldset input, .blogsearch form input {
     height: 40px;
-    width: 100%;
+    width: 80%;
     border: 0;
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
@@ -854,13 +915,13 @@ hr.line.align-right {
     text-indent: 8px;
     margin-top: 6px;
     margin-bottom: 7px;
-    float:left;
     padding: 0;
+    border-radius: 5px;
 }
 
 .widget.profile fieldset button.btn, .widget.signupform fieldset button.btn, .blogsearch form button  {
-    padding: 12px 20px 10px;
-    margin: 0;
+    padding: 6px 20px;
+    margin: 6px 0 7px 5px;
     border: none;
     -webkit-box-shadow: 0 2px 0px @color-swatch3;
     -moz-box-shadow: 0 2px 0px @color-swatch3;
@@ -873,6 +934,8 @@ hr.line.align-right {
     line-height: @font-swatch7-line-height;
     text-decoration: none;
     letter-spacing: 1px;
+    vertical-align: top;
+    coursor: pointer;
 }
 
 .widget.profile fieldset button.btn:hover, .widget.signupform fieldset button.btn:hover {
@@ -949,12 +1012,21 @@ hr.line.align-right {
     display: inline-block;
     margin-right: 6px;
     background-repeat: no-repeat;
-    background-color: @color-swatch5;
+    background-color: @color-swatch6;
     background-position: center;
     margin-bottom: 6px;
-    background-size: 18px;
+    background-size: auto;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
 }
-
+.widget.profile .bk-profile-socialicons span a{
+  background-color: @color-swatch6;
+  background-size: auto;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
 /* SVG ICONS not active
 
 .svg .widget.socialicons span.bk-socialicons-twitter a,
@@ -1042,7 +1114,7 @@ hr.line.align-right {
 .bk-footer .widget.profile fieldset input {
     height: 40px;
     width: 100%;
-    border: 1px solid @color-swatch1;
+    border: 0;
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
@@ -1051,10 +1123,21 @@ hr.line.align-right {
     margin-bottom: 20px;
     float: left;
     padding: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 
+.bk-footer .widget.profile fieldset textarea{
+  font-family: @font-swatch5-font-family;
+  font-size: @font-swatch5-font-size;
+  color: @font-swatch5-color;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
 .bk-footer .widget.profile fieldset button.btn {
-    padding: 12px 20px 10px;
+    padding: 6px 20px;
     border: none;
     -webkit-box-shadow: 0 2px 0 @color-swatch3;
     -moz-box-shadow: 0 2px 0 @color-swatch3;
@@ -1067,13 +1150,15 @@ hr.line.align-right {
     line-height: @font-swatch7-line-height;
     text-decoration: none;
     letter-spacing: 1px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 
 .bk-footer .widget.profile fieldset button.btn:hover {
     background-color: @font-swatch7-background-color-hover;
     cursor: pointer;
 }
-
 
   /* ===============================
    SLIDESHOW WIDGET
@@ -1093,10 +1178,10 @@ hr.line.align-right {
     }
     .title {
         display: block;
-        color: @color-swatch5;
+        color: @color-swatch3;
     }
     .description {
-        color: @color-swatch5;
+        color: @color-swatch3;
     }
     .content-wrapper {
         background: @color-swatch1;
@@ -1178,13 +1263,30 @@ hr.line.align-right {
   border: 0;
 }
 /* ===============================
+   ECOMMERCE
+   =============================== */
+
+.standard-price{
+  font-size: @font-swatch4-font-size;
+  padding: 1em 0;
+}
+.main .menu-item-name{
+  padding: 0.5em 0;
+}
+
+
+/* ===============================
    LIST
    =============================== */
-.bk-content-text li{
+
+.bk-content-text ul li{
     background-image: image('/images/arrow.png');
-    background-position: 0 12px;
+    background-position: 0 7px;
+    background-repeat: no-repeat;
     line-height: 24px;
+    background-color: transparent;
 }
+
 /* ===============================
   BLOG
    =============================== */
@@ -1286,11 +1388,15 @@ width: 100%;
 /* ===============================
    MENU
    =============================== */
-
+.menu .menu-subsection{
+  padding: 1em;
+}
+.menu-subsection-header{
+  padding: 2em 1em 0.2em;
+}
 .widget {
     &.menu {
         margin-top: 0.3em;
-        float: left;
         width: 100%;
         .main {
             width: 100%;
@@ -1314,9 +1420,10 @@ width: 100%;
                     li { /* menu-item */
                         position: relative;
                         display: block;
-                        padding-bottom: 2em;
-                        margin-bottom: 0;
+                        padding: 2em;
+                        margin-bottom: 2em;
                         width: 100%;
+                        background: @color-swatch3;
                         &.menu-item-promoted { /* menu-item-promoted */
                                 display: inline-block;
                                 .inner-item {
@@ -1385,6 +1492,7 @@ width: 100%;
                 } /* end ol */  
 
                 .menu-subsection {
+                  background: @color-swatch3;
                   padding: 0;
                 }
 
@@ -1415,15 +1523,12 @@ width: 100%;
                       float: left;
                       width: 100%;
                       padding: 2em 0;
-                      color: @color-swatch3;
+                      color: @color-swatch1;
                     }
                 } /* end menu-info */
         } /* end main */
     } /* end .widget.menu */
 } /* end .widget */
-
-
-
 /* ===============================
    IPAD WIDTH
    =============================== */
@@ -1470,7 +1575,7 @@ width: 100%;
     display: block;
     width: 100%;
     position: absolute;
-    top: -60px;
+    top: 0px;
   }
 
     .widget .extendednavigation a.pull:after {
@@ -1480,9 +1585,9 @@ width: 100%;
     height: 30px;
     display: inline-block;
     position: absolute;
-    right: 15px;
-    top: 0px;
-    box-shadow: none;
+    right: 0;
+    top: 10px;
+    box-shadow: none !important;
   }
 
   #page-zones__template-widgets__extendednavigation-navigationheader {
@@ -1497,39 +1602,37 @@ width: 100%;
     padding: 0; 
     margin: 0;
   }
-.widget.extendednavigation ul li, .widget.extendednavigation ul li.folder, .widget.extendednavigation ul li.folder:hover {
-  padding: 1em 0;
-}
-
-
-  .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
-      padding: 12px 0;
-      margin: 0;
+  .widget.extendednavigation ul li, .widget.extendednavigation ul li.folder, .widget.extendednavigation ul li.folder:hover {
+    padding: 1em 0;
   }
 
+  .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
+    padding: 10px;
+    margin: 0;
+    line-height: 20px;
+    font-size: @font-swatch7-font-size;
+  }
 
   .widget.extendednavigation ul li > ul {
-      display: none!important;
+    display: none!important;
   }
 
   .widget.extendednavigation ul li:hover > ul {
-      display: block!important;
-      width: 100%;
-      border: 1px solid darken(@color-swatch2,5%);
-      margin: 0;
-      padding: 0;
+    display: block!important;
+    width: 100%;
+    border: 1px solid darken(@color-swatch2,5%);
+    margin: 0;
+    padding: 0;
   }
 
   .widget.extendednavigation ul li:hover > ul li {
-      padding: 0;
+    padding: 0;
   }
-
-
 
   /* EXTENDED NAVIGATION - INSIDE ZONE */
 
   .main .widget.extendednavigation {
-   border-top: 0;
+    border-top: 0;
   }
 
   .main .widget.extendednavigation ul {
@@ -1570,7 +1673,7 @@ width: 100%;
 
   .widget.feature button {
   margin: 8px 0 12px;
-  padding: 10px 10px 8px;
+  padding: 6px 10px;
 }
 
   .widget.feature .feature-btn {
@@ -1594,7 +1697,9 @@ width: 100%;
   .widget.responsiveslideshow .slideshow-image-list {
       height: 400px;
   }
-
+  .widget.clicktocall a, .widget.clicktocall a:hover{
+    padding: 6px 10px 6px 38px;
+  }
 
 }
 
@@ -1623,7 +1728,7 @@ width: 100%;
 @media only screen and (max-width: 480px) {
 
 /* FEATURE */
-
+  
   .widget.feature .feature-bgimg {
     height: 220px;
    }
@@ -1631,17 +1736,19 @@ width: 100%;
   .widget.feature .content {
     height: 220px;
   }
-
+  .widget.feature .feature-bgimg .content{
+    padding-top: 15px;
+  }
   .widget.feature h2 {
-    font-size:bkscale(@font-swatch8-font-size, 0.6);
-    padding-bottom: 4px;
+    font-size:bkscale(@font-swatch8-font-size, 0.4);
+    padding-bottom: 0;
     text-align: center;
-    line-height: 30px;
+    line-height: bkscale(@font-swatch8-font-size, 0.4);
   }
 
   .widget.feature h3 {
-    font-size:bkscale(@font-swatch9-font-size, 0.8);
-    line-height: bkscale(@font-swatch9-line-height,0.8);
+    font-size:bkscale(@font-swatch9-font-size, 0.7);
+    line-height: 0;
     text-align: center;
   }
 
@@ -1650,9 +1757,13 @@ width: 100%;
   }
 
  .widget.feature button {
-  padding: 10px 13px;
+  padding: 6px 13px;
   font-size: bkscale(@font-swatch7-font-size,0.9);
  }
+/* other */
+.widget.profile fieldset button.btn, .widget.signupform fieldset button.btn, .blogsearch form button{
+  margin-left: 1px;
+}
 
 /* BLOCKQUOTE */
 
@@ -1682,6 +1793,16 @@ blockquote {
     width: 960px; /* 1140px - 10% for margins */
     margin: 0 auto;
   }
+}
+
+.widget:after,
+.menu:after{
+  content: "";  
+  display: block;  
+  clear: both;  
+  visibility: hidden;  
+  font-size: 0;  
+  height: 0;  
 }
 
 .clearfix:before,

@@ -24,7 +24,7 @@
             "font-size": "60px",
             "font-weight": "700",
             "line-height": "60px",
-            "color": "@color-swatch1",
+            "color": "@color-swatch2",
             "letter-spacing": "inherit"
         },
         "font2": {
@@ -55,7 +55,7 @@
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
             "font-size": "12px",
             "font-weight": "inherit",
-            "line-height": "14px",
+            "line-height": "20px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
         },
