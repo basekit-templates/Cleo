@@ -426,13 +426,16 @@ code{
    PAYPAL & DROPBOX BUTTON
    =============================== */
 
-.widget.paypalbuynow .widget.button.paypal, .widget.dropbox .b-wrap .btn {
+.widget.paypalbuynow .widget.button.paypal, .widget.dropbox .b-wrap .btn, .widget.tweet a {
   font-family: @font-swatch7-font-family;
   font-size: @font-swatch7-font-size;
   font-weight:@font-swatch7-font-weight;
   background-color: @font-swatch7-background-color;
   line-height: @font-swatch7-line-height;
   color: @font-swatch7-color;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   padding: 6px 10px 6px 45px;
   border: none;
 }
@@ -721,7 +724,7 @@ hr.line.align-right {
   border-radius: 5px;
 }
 .widget.clicktocall a:hover{
-  padding: 6px 10px;
+  padding: 10px;
 }
 /* ===============================
    TWITTER WIDGET
@@ -761,6 +764,10 @@ hr.line.align-right {
 
 .widget.twitter ul li:last-child {
     padding-bottom: 30px;
+}
+
+.widget.twitter ul li span a{
+  color: @color-swatch1;
 }
 
 .widget.twitter .twitter-profile-pic {
@@ -1696,9 +1703,6 @@ width: 100%;
      /* Slideshow */
   .widget.responsiveslideshow .slideshow-image-list {
       height: 400px;
-  }
-  .widget.clicktocall a, .widget.clicktocall a:hover{
-    padding: 6px 10px 6px 38px;
   }
 
 }
