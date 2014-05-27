@@ -2,6 +2,7 @@
 	"name":"cleo",
 	"thumbnail":"cleo.png",
 	"screenshot":"cleo.png",
+    "pageTypes":["home","default"],
     "tags": {
         "en": ["Business", "Trade", "company", "business", "corporate", "finance", "financial", "firm", "money", "simple"]        
     },
@@ -15,6 +16,42 @@
             "color5":"#ff8a19",
             "color6":"#516372",
             "color7":"#fcfcfc"
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#841c2f",
+            "color3":"#841c2f",
+            "color4":"#000000",
+            "color5":"#3c4a55",
+            "color6":"#000000",
+            "color7":"#ffffff"
+        },
+        "Swatch 3": {
+            "color1":"#ffffff",
+            "color2":"#4F7391",
+            "color3":"#4F7391",
+            "color4":"#000000",
+            "color5":"#3c4a55",
+            "color6":"#000000",
+            "color7":"#ffffff"
+        },
+        "Swatch 4": {
+            "color1":"#ffffff",
+            "color2":"#aaaaaa",
+            "color3":"#000000",
+            "color4":"#000000",
+            "color5":"#aaaaaa",
+            "color6":"#000000",
+            "color7":"#000000"
+        },
+        "Swatch 5": {
+            "color1":"#ffffff",
+            "color2":"#4BA5A1",
+            "color3":"#4BA5A1",
+            "color4":"#000000",
+            "color5":"#3c4a55",
+            "color6":"#000000",
+            "color7":"#ffffff"
         }
     },
     "fontSwatch": {
